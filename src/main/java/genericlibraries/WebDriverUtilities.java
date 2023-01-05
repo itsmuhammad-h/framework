@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -64,7 +63,7 @@ public class WebDriverUtilities {
     	
               int count=	option.size();
               System.out.println("count of dropdown list  :"+count);
-              ArrayList list=new ArrayList();
+              ArrayList<String> list=new ArrayList<String>();
               for(WebElement z:option)
               {
             	 String alltext= z.getText();
