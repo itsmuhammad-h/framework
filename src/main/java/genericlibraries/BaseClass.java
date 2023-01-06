@@ -26,8 +26,8 @@ public class BaseClass {
 	public void openApp() throws IOException
 	{
 		WebDriverManager.chromedriver().setup();
-	//	driver=new ChromeDriver();
-		driver=new FirefoxDriver();
+		driver=new ChromeDriver();
+		//driver=new FirefoxDriver();
 		driver.get(pdata.getData("url"));
 		driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
