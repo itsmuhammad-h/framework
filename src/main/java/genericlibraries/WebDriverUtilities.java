@@ -106,16 +106,35 @@ public class WebDriverUtilities {
 	public void dragAnddrop(WebDriver driver,WebElement src,WebElement dst)
 	{
 		Actions act=new Actions(driver);
-	    act.dragAndDrop(src, dst).build().perform();
+	    act.dragAndDrop(src, dst).perform();
 	    
 	    
 	}
+	
+	
+	
+	public void clickAndHold(WebDriver driver,WebElement element)
+	{
+		Actions act=new Actions(driver);
+	    act.clickAndHold(element).perform();
+	    
+	    }
+	
+	public void release(WebDriver driver,WebElement element)
+	{
+		Actions act=new Actions(driver);
+	    act.release(element).perform();
+	    
+	    
+	}
+	
+	
 	
 	public void dragAnddropBy(WebDriver driver,WebElement src,int x,int y)
 	{
 		Actions act=new Actions(driver);
 	   
-	    act.dragAndDropBy(src, x, y);
+	    act.dragAndDropBy(src, x, y).perform();
 	    
 	}
 	

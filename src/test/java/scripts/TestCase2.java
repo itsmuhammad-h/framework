@@ -24,33 +24,38 @@ public class TestCase2  extends BaseClass{
 		SkillraryDemoLogin sd=new SkillraryDemoLogin (driver);
 		driverutilities.switchTabs(driver);
 		
+		
 		driverutilities.DropdownSelectByVisibleText(sd.getCoursedd(), pdata.getData("Coursedd"));
 		
 		CoursePage cp=new CoursePage(driver);
 		
 		
-		driverutilities.scrollByJavascriptExecutor(driver, 0, 195);
+		//driverutilities.scrollByJavascriptExecutor(driver, 0, 195);
 		
-		driverutilities.dragAnddrop(driver, cp.getSeleniumTraining(), cp.getCartArea());
+	//	driverutilities.dragAnddrop(driver, cp.getSeleniumTraining(), cp.getCartArea());
 
-		
+		/*
 WebElement location=cp.getCartArea();
 Point loc = location.getLocation();
  int x = loc.getX();
  int y = loc.getY();
+ */
  
- 
- 
+      driverutilities.clickAndHold(driver, cp.getSeleniumTraining());
+     driverutilities.scrollByJavascriptExecutor(driver, 0, 194);
+      Thread.sleep(1000);
+      driverutilities.moveToElement(driver, cp.getCartArea());
+      driverutilities.release(driver, cp.getSeleniumTraining());
+      Thread.sleep(3000);
+      
+	
 		
 		
-		//driverutilities.dragAnddropBy(driver, cp.getSeleniumTraining(), x, y);
-		Thread.sleep(4000);
-		driverutilities.ScrollIntoView(driver, cp.getInstaicon());
-		cp.Clickoninstaicon();
+	//	driverutilities.ScrollIntoView(driver, cp.getInstaicon());
+	//	cp.Clickoninstaicon();
 	
 		
 		
 	}
 	
-
 }
