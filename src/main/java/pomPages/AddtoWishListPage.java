@@ -44,6 +44,8 @@ public class AddtoWishListPage {
 		
 		
 	}
+	
+	//we are clicking x button of popup bcoz Alert is nt working on it 
 public void closepopup()
 {
 	closepopp.click();
