@@ -11,7 +11,7 @@ public class AddtoWishListPage {
 	
 
 	
-@FindBy(xpath="//div//button//*[@class='PlayButton_module_pauseIcon__1a9572b1']") private WebElement pausebtn;
+@FindBy(xpath="//div//button[@aria-label='Pause']//*[@class='PlayButton_module_pauseIcon__1a9572b1']") private WebElement pausebtn;
 	//always go with div i mean find using parent tag
 
 	@FindBy(xpath="	//*[text()='Add To Wishlist']	") private WebElement addtowishlistbtn;
