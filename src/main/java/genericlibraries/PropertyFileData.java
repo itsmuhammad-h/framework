@@ -12,7 +12,7 @@ public class PropertyFileData {
 		Properties p=new Properties();
 		FileInputStream fis=new FileInputStream(AutoConstant.propertyfilepath);
 		p.load(fis);
-		return p.getProperty(key);
+		return p.getProperty(key);     //just give p.getProperty(key); here while reading data in baseclass we get to see suggestion of changing type to String from void 
 		
 	}
 }
